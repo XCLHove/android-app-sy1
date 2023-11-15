@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Activity-Sy1</string>
+    <!--button-->
+    <string name="showToast">toast消息</string>
+    <string name="nextPage">下一页</string>
+    <string name="back">返回</string>
+    <!--MenuItem-->
+    <string name="add">ADD</string>
+    <string name="remove">REMOVE</string>
+    <!--TextView-->
+    <string name="showMainData">main data</string>
+    <string name="showSecondData">second data</string>
+    <string name="showSecondDataInMain">showSecondDataInMain</string>
+</resources>
