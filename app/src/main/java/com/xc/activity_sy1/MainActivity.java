@@ -26,13 +26,23 @@ public class MainActivity extends AppCompatActivity {
             ToastUtil.showToast(MainActivity.this, "这是一个toast消息");
         });
 
-        //下一页
+        //下一页(隐式)
         findViewById(R.id.nextPage).setOnClickListener(view -> {
             SimpleDateFormat formatter= new SimpleDateFormat("'当前时间：'yyyy-MM-dd HH:mm:ss'，来自MainActivity'");
             Date date = new Date(System.currentTimeMillis());
             String data = formatter.format(date);
-            //Intent intent = new Intent(MainActivity.this, SecondActivity.class); //隐式
-            Intent intent = new Intent("android.intent.action.SECOND"); //显示
+            Intent intent = new Intent("android.intent.action.SECOND"); //隐式
+            intent.putExtra("main_data", data);
+            //startActivity(intent);
+            startActivityForResult(intent, 1);
+        });
+
+        //下一页(显式)
+        findViewById(R.id.nextPage2).setOnClickListener(view -> {
+            SimpleDateFormat formatter= new SimpleDateFormat("'当前时间：'yyyy-MM-dd HH:mm:ss'，来自MainActivity'");
+            Date date = new Date(System.currentTimeMillis());
+            String data = formatter.format(date);
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class); //显式
             intent.putExtra("main_data", data);
             //startActivity(intent);
             startActivityForResult(intent, 1);
