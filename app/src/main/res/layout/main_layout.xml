@@ -8,24 +8,49 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
+        <!--showToast-->
         <Button
             android:id="@+id/showToast"
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:text="@string/showToast" />
+        <!--nextPage-->
         <Button
             android:id="@+id/nextPage"
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:text="@string/nextPage" />
-
+        <!--nextPage2-->
         <Button
             android:id="@+id/nextPage2"
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:text="@string/nextPage2" />
-
+        <!--standardToSelf-->
+        <Button
+            android:id="@+id/standardToSelf"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:text="@string/standardToSelf" />
+        <!--toSingleTop-->
+        <Button
+            android:id="@+id/toSingleTop"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:text="@string/toSingleTop" />
+        <!--toSingleTask-->
+        <Button
+            android:id="@+id/toSingleTask"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:text="@string/toSingleTask" />
+        <!--toSingleInstance-->
+        <Button
+            android:id="@+id/toSingleInstance"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:text="@string/toSingleInstance" />
+        <!--showSecondDataInMain-->
         <TextView
             android:id="@+id/showSecondDataInMain"
             android:layout_width="match_parent"

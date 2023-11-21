@@ -4,8 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
+
+import com.xc.activity_sy1.util.LogUtil;
 
 import java.util.Random;
 
@@ -13,8 +14,10 @@ public class SecondActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        LogUtil.info("SecondActivity:onCreate");
+        setTitle("Second Activity");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.second_lauout);
+        setContentView(R.layout.second_layout);
         Intent intent = getIntent();
 
         //main data

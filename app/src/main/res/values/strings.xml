@@ -1,15 +1,32 @@
 <resources>
     <string name="app_name">Activity-Sy1</string>
-    <!--button-->
+    <!--main button-->
     <string name="showToast">toast消息</string>
     <string name="nextPage">下一页(隐式)</string>
     <string name="nextPage2">下一页(显式)</string>
     <string name="back">返回</string>
+    <string name="standardToSelf">standard to Self</string>
+    <string name="toSingleTop">to Single_Top</string>
+    <string name="toSingleTask">to Single_Task</string>
+    <string name="toSingleInstance">to Single_Instance</string>
+
+    <!--singleTop button-->
+    <string name="singleTopToSelf">single_Top To Self</string>
+    <string name="singleTopToStandard">single_Top To Standard</string>
+
+    <!--singleTask button-->
+    <string name="singleTaskToSelf">single_Task To Self</string>
+    <string name="singleTaskToStandard">single_Task To Standard</string>
+
     <!--MenuItem-->
     <string name="add">ADD</string>
     <string name="remove">REMOVE</string>
-    <!--TextView-->
-    <string name="showMainData">main data</string>
+
+    <!--main TextView-->
     <string name="showSecondData">second data</string>
+
+    <!--second TextView-->
+    <string name="showMainData">main data</string>
     <string name="showSecondDataInMain">showSecondDataInMain</string>
+    <string name="toThird">to Third</string>
 </resources>

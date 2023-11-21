@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != RESULT_OK) return;
         if (requestCode != 1) return;
         String secondData = data.getStringExtra("second_data");
@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        LogUtil.info("onCreate");
+        LogUtil.info("MainActivity:onCreate");
+        setTitle("Main Activity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
 
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         //下一页(隐式)
         findViewById(R.id.nextPage).setOnClickListener(view -> {
-            LogUtil.info("下一页(隐式)");
+            LogUtil.warn("下一页(隐式)");
             SimpleDateFormat formatter= new SimpleDateFormat("'当前时间：'yyyy-MM-dd HH:mm:ss'，来自MainActivity'");
             Date date = new Date(System.currentTimeMillis());
             String data = formatter.format(date);
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         //下一页(显式)
         findViewById(R.id.nextPage2).setOnClickListener(view -> {
-            LogUtil.info("下一页(显式)");
+            LogUtil.warn("下一页(显式)");
             SimpleDateFormat formatter= new SimpleDateFormat("'当前时间：'yyyy-MM-dd HH:mm:ss'，来自MainActivity'");
             Date date = new Date(System.currentTimeMillis());
             String data = formatter.format(date);
@@ -77,6 +78,35 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("main_data", data);
             //startActivity(intent);
             startActivityForResult(intent, 1);
+        });
+
+        //standardToSelf
+        findViewById(R.id.standardToSelf).setOnClickListener(view -> {
+            LogUtil.warn("standardToSelf");
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        });
+
+        //toSingleTop
+        findViewById(R.id.toSingleTop).setOnClickListener(view -> {
+            LogUtil.warn("toSingleTop");
+            Intent intent = new Intent(this, SingleTopActivity.class);
+            startActivity(intent);
+        });
+
+        //toSingleTask
+        findViewById(R.id.toSingleTask).setOnClickListener(view -> {
+            LogUtil.warn("toSingleTask");
+            Intent intent = new Intent(this, SingleTaskActivity.class);
+            startActivity(intent);
+        });
+
+        //toSingleInstance
+        findViewById(R.id.toSingleInstance).setOnClickListener(view -> {
+            LogUtil.warn("standardToSelf");
+            LogUtil.info("MainActivity taskId:" + getTaskId());
+            Intent intent = new Intent(this, SingleInstanceActivity.class);
+            startActivity(intent);
         });
     }
 
